@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-node-app
+  namespace: default
+spec:
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: my-node-app
+  source:
+    repoURL: 'https://github.com/Rigel0000/cloud-computing-and-devops-project'
+    path: '.'
+    targetRevision: 'main'
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
