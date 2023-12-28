@@ -11,5 +11,4 @@ spec:
     server: 'https://kubernetes.default.svc'
     namespace: argocd
     name: argocd-secret
-    namespaceKey: server.secretkey
-    value: eW91ci1zZWNyZXQta2V5
+    serverSecretName: server.secretkey
