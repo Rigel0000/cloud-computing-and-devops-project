@@ -7,8 +7,15 @@ spec:
   source:
     repoURL: https://github.com/Rigel0000/cloud-computing-and-devops-project
     targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values.yaml
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: argocd
     name: argocd-secret
-    serverSecretName: server.secretkey
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
