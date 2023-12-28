@@ -1,0 +1,13 @@
+[00:18, 29.12.2023] Furkan: Hocam container porta nerden ulaşıcam ben ?
+[00:18, 29.12.2023] Furkan: apiVersion: v1
+kind: Pod
+metadata:
+  name: Deployment
+  labels:
+    app: myapp
+spec:
+  containers:
+  - name: cuneytfurkan/my-node-app
+    image: my-node-app:1.0
+    ports:
+    - containerPort: 4000
