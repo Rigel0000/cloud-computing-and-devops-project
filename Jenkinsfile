@@ -21,16 +21,17 @@ pipeline {
             steps {
                 script {
                     // Burada Docker imajını oluşturma işlemleri yapılır
-                    sh 'docker build -t my-node-app:1.0 .'
+                    sh 'docker build -t cuneytfurkan/my-node-app:1.0 .'
                 }
             }
         }
 
-        stage('Push to Container Registry') {
+        stage('Push to Docker Hub') {
             steps {
                 script {
-                    // Burada imajı container registry'ye gönderme işlemleri yapılır
-                    sh 'docker push my-node-app:1.0'
+                    // Burada imajı Docker Hub'a gönderme işlemleri yapılır
+                    sh 'docker login -u cuneytfurkan -p njjUwmL123'
+                    sh 'docker push cuneytfurkan/my-node-app:1.0'
                 }
             }
         }
