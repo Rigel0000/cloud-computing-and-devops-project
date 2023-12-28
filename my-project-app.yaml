@@ -9,10 +9,11 @@ spec:
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc/'
-    namespace: default
+    namespace: argocd
     # Eklenmiş server key bölümü
-    config:
-      server:
-        secretkey:
-          # Base64 secret server key'inizi buraya girin
-          value: eW91ci1zZWNyZXQta2V5
+  syncPolicy:
+    syncOptions:
+    - Create namespace=True
+    automated:
+      selfHeal: True
+      prune: True
