@@ -1,5 +1,4 @@
-[00:18, 29.12.2023] Furkan: Hocam container porta nerden ulaşıcam ben ?
-[00:18, 29.12.2023] Furkan: apiVersion: v1
+apiVersion: v1
 kind: Pod
 metadata:
   name: Deployment
