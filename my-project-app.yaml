@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-project-app
+spec:
+  project: default
+  source:
+    repoURL: <https://github.com/Rigel0000/cloud-computing-and-devops-project>
+    targetRevision: HEAD
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: argocd
