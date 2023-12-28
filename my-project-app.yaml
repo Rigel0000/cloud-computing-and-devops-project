@@ -9,11 +9,4 @@ spec:
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc/'
-    namespace: argocd
-    # Eklenmiş server key bölümü
-  syncPolicy:
-    syncOptions:
-    - Create namespace=True
-    automated:
-      selfHeal: True
-      prune: True
+    namespace: default
